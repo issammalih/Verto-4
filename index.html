@@ -1010,6 +1010,255 @@ footer{background:#050508;border-top:1px solid var(--border);padding:60px 18px 3
   })();
   </script>
 </section>
+  <!-- 3D SERVICE CUBE -->
+<section class="section" id="cube-section">
+  <div class="sh reveal">
+    <div class="sh-pill" data-en="Our Services" data-es="Nuestros Servicios">Our Services</div>
+    <h2><span data-en="Six services." data-es="Seis servicios.">Six services.</span> <span class="accent-text" data-en="One cube." data-es="Un cubo.">One cube.</span></h2>
+    <p data-en="Drag or click the cube to explore every service we offer." data-es="Arrastra o haz clic para explorar cada servicio.">Drag or click the cube to explore every service we offer.</p>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center" class="cube-layout">
+
+    <!-- LEFT: 3D Cube -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:20px">
+      <div id="cube-scene" style="width:280px;height:280px;perspective:800px;cursor:grab">
+        <div id="cube" style="width:100%;height:100%;position:relative;transform-style:preserve-3d;transform:rotateX(-20deg) rotateY(30deg);transition:transform .1s ease">
+          <!-- Face Front: Email -->
+          <div class="cube-face" style="transform:translateZ(140px);background:linear-gradient(135deg,rgba(255,107,26,.15),rgba(255,107,26,.05));border-color:rgba(255,107,26,.4)">
+            <div class="cube-face-ico">📧</div>
+            <div class="cube-face-title" data-en="Email Marketing" data-es="Email Marketing">Email Marketing</div>
+            <div class="cube-face-num">01</div>
+          </div>
+          <!-- Face Back: SEO -->
+          <div class="cube-face" style="transform:rotateY(180deg) translateZ(140px);background:linear-gradient(135deg,rgba(74,158,255,.15),rgba(74,158,255,.05));border-color:rgba(74,158,255,.4)">
+            <div class="cube-face-ico">🔍</div>
+            <div class="cube-face-title" data-en="SEO & Visibility" data-es="SEO y Visibilidad">SEO & Visibility</div>
+            <div class="cube-face-num">02</div>
+          </div>
+          <!-- Face Right: Paid Ads -->
+          <div class="cube-face" style="transform:rotateY(90deg) translateZ(140px);background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(168,85,247,.05));border-color:rgba(168,85,247,.4)">
+            <div class="cube-face-ico">📣</div>
+            <div class="cube-face-title" data-en="Paid Ads" data-es="Publicidad">Paid Ads</div>
+            <div class="cube-face-num">03</div>
+          </div>
+          <!-- Face Left: Social -->
+          <div class="cube-face" style="transform:rotateY(-90deg) translateZ(140px);background:linear-gradient(135deg,rgba(16,185,129,.15),rgba(16,185,129,.05));border-color:rgba(16,185,129,.4)">
+            <div class="cube-face-ico">📱</div>
+            <div class="cube-face-title" data-en="Social Media" data-es="Redes Sociales">Social Media</div>
+            <div class="cube-face-num">04</div>
+          </div>
+          <!-- Face Top: Content -->
+          <div class="cube-face" style="transform:rotateX(90deg) translateZ(140px);background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(245,158,11,.05));border-color:rgba(245,158,11,.4)">
+            <div class="cube-face-ico">🎨</div>
+            <div class="cube-face-title" data-en="Content Creation" data-es="Contenido">Content Creation</div>
+            <div class="cube-face-num">05</div>
+          </div>
+          <!-- Face Bottom: Analytics -->
+          <div class="cube-face" style="transform:rotateX(-90deg) translateZ(140px);background:linear-gradient(135deg,rgba(236,72,153,.15),rgba(236,72,153,.05));border-color:rgba(236,72,153,.4)">
+            <div class="cube-face-ico">📊</div>
+            <div class="cube-face-title" data-en="Analytics" data-es="Analítica">Analytics</div>
+            <div class="cube-face-num">06</div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls hint -->
+      <div style="display:flex;gap:12px">
+        <button class="cube-btn" onclick="rotateTo(0)" data-en="Auto Spin" data-es="Girar">Auto Spin</button>
+        <button class="cube-btn" onclick="prevFace()" >←</button>
+        <button class="cube-btn" onclick="nextFace()">→</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: Service detail panel -->
+    <div id="cube-panel" style="background:linear-gradient(160deg,var(--card),var(--bg-2));border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;overflow:hidden;transition:.4s cubic-bezier(.34,1.56,.64,1)">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--panel-color,#ff6b1a),transparent)" id="panel-top-bar"></div>
+      <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,var(--panel-color,rgba(255,107,26,.15)),transparent 70%)" id="panel-glow"></div>
+
+      <div style="font-size:48px;margin-bottom:16px;display:block;transition:.3s" id="panel-ico">📧</div>
+      <div style="font-size:10px;font-weight:800;color:var(--accent-2);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px" id="panel-num">SERVICE 01</div>
+      <div style="font-size:24px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:12px;transition:.3s" id="panel-title">Email Marketing</div>
+      <div style="font-size:13px;color:var(--text-2);line-height:1.7;margin-bottom:20px;transition:.3s" id="panel-desc">Strategic email sequences that nurture leads, recover abandoned carts, and re-engage cold audiences — all automated and personalized at scale across 6 languages.</div>
+
+      <!-- Stats -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px" id="panel-stats">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px;text-align:center">
+          <div style="font-size:18px;font-weight:800;color:#ff6b1a" id="ps1">+340%</div>
+          <div style="font-size:9px;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px;margin-top:2px" id="pl1">Open Rate</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px;text-align:center">
+          <div style="font-size:18px;font-weight:800;color:#4a9eff" id="ps2">2.4x</div>
+          <div style="font-size:9px;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px;margin-top:2px" id="pl2">Click Rate</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px;text-align:center">
+          <div style="font-size:18px;font-weight:800;color:#10b981" id="ps3">+487%</div>
+          <div style="font-size:9px;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px;margin-top:2px" id="pl3">Revenue</div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div id="panel-feats" style="display:flex;flex-direction:column;gap:7px;margin-bottom:20px">
+        <div class="cpf"><span class="cpf-dot" style="background:#ff6b1a"></span>Automated welcome & nurture sequences</div>
+        <div class="cpf"><span class="cpf-dot" style="background:#ff6b1a"></span>A/B testing subject lines & content</div>
+        <div class="cpf"><span class="cpf-dot" style="background:#ff6b1a"></span>Segmentation by behavior & interest</div>
+      </div>
+
+      <button class="btn-primary" onclick="openModal(document.getElementById('panel-title').textContent)" style="width:100%;justify-content:center;font-size:12px;padding:12px">
+        <span data-en="Start This Service" data-es="Iniciar Servicio">Start This Service</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <style>
+  .cube-face{
+    position:absolute;width:280px;height:280px;
+    border:1px solid;border-radius:20px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 40px rgba(0,0,0,.4);
+  }
+  .cube-face-ico{font-size:52px;margin-bottom:12px;filter:drop-shadow(0 4px 12px rgba(255,107,26,.3))}
+  .cube-face-title{font-size:16px;font-weight:800;color:#fff;text-align:center;letter-spacing:-.3px;padding:0 16px}
+  .cube-face-num{position:absolute;bottom:16px;right:16px;font-size:10px;font-weight:800;color:rgba(255,255,255,.2);letter-spacing:2px}
+  .cube-btn{padding:8px 16px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:100px;color:#fff;font-size:11px;font-weight:700;cursor:pointer;transition:.25s}
+  .cube-btn:hover{background:var(--accent);border-color:var(--accent)}
+  .cpf{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-2)}
+  .cpf-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+  @media(max-width:768px){
+    .cube-layout{grid-template-columns:1fr !important;gap:28px}
+    #cube-scene{width:220px;height:220px}
+    .cube-face{width:220px;height:220px}
+    .cube-face{transform-origin:center}
+    .cube-face:nth-child(1){transform:translateZ(110px) !important}
+    .cube-face:nth-child(2){transform:rotateY(180deg) translateZ(110px) !important}
+    .cube-face:nth-child(3){transform:rotateY(90deg) translateZ(110px) !important}
+    .cube-face:nth-child(4){transform:rotateY(-90deg) translateZ(110px) !important}
+    .cube-face:nth-child(5){transform:rotateX(90deg) translateZ(110px) !important}
+    .cube-face:nth-child(6){transform:rotateX(-90deg) translateZ(110px) !important}
+  }
+  </style>
+
+  <script>
+  (function(){
+    var cube=document.getElementById('cube');
+    var scene=document.getElementById('cube-scene');
+    if(!cube||!scene)return;
+
+    var rotX=-20,rotY=30;
+    var isDragging=false,lastX=0,lastY=0;
+    var autoSpin=true,autoTimer=null;
+    var currentFace=0;
+
+    var services=[
+      {ico:'📧',num:'SERVICE 01',title:'Email Marketing',color:'#ff6b1a',
+       desc:'Strategic email sequences that nurture leads, recover abandoned carts, and re-engage cold audiences — automated and personalized across 6 languages.',
+       s1:'+340%',l1:'Open Rate',s2:'2.4x',l2:'Click Rate',s3:'+487%',l3:'Revenue',
+       feats:['Automated welcome & nurture sequences','A/B testing subject lines & content','Segmentation by behavior & interest']},
+      {ico:'🔍',num:'SERVICE 02',title:'SEO & Visibility',color:'#4a9eff',
+       desc:'Full on-page & off-page SEO — keyword research, technical audits, link building, and multilingual content that dominates search results globally.',
+       s1:'#1',l1:'Google Rank',s2:'+312%',l2:'Organic Traffic',s3:'6mo',l3:'Timeline',
+       feats:['Keyword research in 6 languages','Technical SEO audit & fixes','High-authority backlink building']},
+      {ico:'📣',num:'SERVICE 03',title:'Paid Advertising',color:'#a855f7',
+       desc:'High-converting ad campaigns with laser-targeted audiences, creative testing, and continuous optimization across Meta, Google, TikTok and LinkedIn.',
+       s1:'+580%',l1:'Avg ROI',s2:'3.2x',l2:'ROAS',s3:'-40%',l3:'Cost/Lead',
+       feats:['Multi-platform campaign management','Creative A/B testing & iteration','Audience research & retargeting']},
+      {ico:'📱',num:'SERVICE 04',title:'Social Media',color:'#10b981',
+       desc:'Complete social media management — from strategy and content calendar to daily posting, community management, and growth analytics across all platforms.',
+       s1:'+240%',l1:'Engagement',s2:'22/mo',l2:'Publications',s3:'+180%',l3:'Followers',
+       feats:['Monthly content calendar & strategy','Daily posting & community replies','Branded visual templates & copy']},
+      {ico:'🎨',num:'SERVICE 05',title:'Content Creation',color:'#f59e0b',
+       desc:'Professional visual production and strategic copywriting — from social media graphics to video ads and full brand identity packages in 6 languages.',
+       s1:'15+',l1:'Assets/mo',s2:'3',l2:'Ad Formats',s3:'100%',l3:'Original',
+       feats:['Custom branded visual design','Professional copywriting in 6 langs','Short-form video & reels production']},
+      {ico:'📊',num:'SERVICE 06',title:'Analytics',color:'#ec4899',
+       desc:'Deep performance tracking across every channel — with custom dashboards, monthly strategy calls, and actionable recommendations to grow faster.',
+       s1:'KPI',l1:'Full Track',s2:'4.9★',l2:'Rating',s3:'24h',l3:'Reports',
+       feats:['Custom analytics dashboard setup','Monthly strategy & review call','Cross-channel attribution tracking']},
+    ];
+
+    var faceRotations=[
+      {x:-20,y:0},
+      {x:-20,y:180},
+      {x:-20,y:-90},
+      {x:-20,y:90},
+      {x:-90,y:0},
+      {x:90,y:0},
+    ];
+
+    function updatePanel(idx){
+      var s=services[idx];
+      var panel=document.getElementById('cube-panel');
+      panel.style.opacity='0';panel.style.transform='translateY(8px)';
+      setTimeout(function(){
+        document.getElementById('panel-ico').textContent=s.ico;
+        document.getElementById('panel-num').textContent=s.num;
+        document.getElementById('panel-title').textContent=s.title;
+        document.getElementById('panel-desc').textContent=s.desc;
+        document.getElementById('ps1').textContent=s.s1;document.getElementById('pl1').textContent=s.l1;
+        document.getElementById('ps2').textContent=s.s2;document.getElementById('pl2').textContent=s.l2;
+        document.getElementById('ps3').textContent=s.s3;document.getElementById('pl3').textContent=s.l3;
+        document.getElementById('ps1').style.color=s.color;
+        document.getElementById('panel-top-bar').style.background='linear-gradient(90deg,'+s.color+',transparent)';
+        document.getElementById('panel-glow').style.background='radial-gradient(circle,'+s.color+'22,transparent 70%)';
+        var feats=document.getElementById('panel-feats');
+        feats.innerHTML=s.feats.map(function(f){return'<div class="cpf"><span class="cpf-dot" style="background:'+s.color+'"></span>'+f+'</div>';}).join('');
+        panel.style.opacity='1';panel.style.transform='translateY(0)';
+      },200);
+    }
+
+    function applyRotation(){
+      cube.style.transform='rotateX('+rotX+'deg) rotateY('+rotY+'deg)';
+    }
+
+    // Drag
+    scene.addEventListener('mousedown',function(e){isDragging=true;lastX=e.clientX;lastY=e.clientY;autoSpin=false;clearInterval(autoTimer);scene.style.cursor='grabbing';});
+    window.addEventListener('mousemove',function(e){if(!isDragging)return;rotY+=(e.clientX-lastX)*.5;rotX-=(e.clientY-lastY)*.5;lastX=e.clientX;lastY=e.clientY;applyRotation();});
+    window.addEventListener('mouseup',function(){isDragging=false;scene.style.cursor='grab';});
+
+    // Touch
+    scene.addEventListener('touchstart',function(e){isDragging=true;lastX=e.touches[0].clientX;lastY=e.touches[0].clientY;autoSpin=false;clearInterval(autoTimer);},{passive:true});
+    window.addEventListener('touchmove',function(e){if(!isDragging)return;rotY+=(e.touches[0].clientX-lastX)*.5;rotX-=(e.touches[0].clientY-lastY)*.5;lastX=e.touches[0].clientX;lastY=e.touches[0].clientY;applyRotation();},{passive:true});
+    window.addEventListener('touchend',function(){isDragging=false;});
+
+    // Auto spin
+    function startAuto(){
+      autoTimer=setInterval(function(){
+        if(!isDragging&&autoSpin){rotY+=.4;applyRotation();}
+      },16);
+    }
+    startAuto();
+
+    // Navigate
+    window.rotateTo=function(idx){
+      autoSpin=!autoSpin;
+    };
+    window.nextFace=function(){
+      currentFace=(currentFace+1)%6;
+      rotX=faceRotations[currentFace].x;
+      rotY=faceRotations[currentFace].y;
+      autoSpin=false;
+      cube.style.transition='transform .7s cubic-bezier(.34,1.56,.64,1)';
+      applyRotation();
+      updatePanel(currentFace);
+      setTimeout(function(){cube.style.transition='transform .1s ease';},700);
+    };
+    window.prevFace=function(){
+      currentFace=(currentFace+5)%6;
+      rotX=faceRotations[currentFace].x;
+      rotY=faceRotations[currentFace].y;
+      autoSpin=false;
+      cube.style.transition='transform .7s cubic-bezier(.34,1.56,.64,1)';
+      applyRotation();
+      updatePanel(currentFace);
+      setTimeout(function(){cube.style.transition='transform .1s ease';},700);
+    };
+
+    // Init panel
+    updatePanel(0);
+  })();
+  </script>
+</section>
 <!-- PROCESS -->
 <section class="section" id="process">
   <div class="sh reveal">
