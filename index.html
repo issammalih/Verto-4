@@ -765,6 +765,251 @@ footer{background:#050508;border-top:1px solid var(--border);padding:60px 18px 3
   })();
   </script>
 </section>
+  <!-- FLOATING METRICS -->
+<section class="section" id="metrics">
+  <div class="sh reveal">
+    <div class="sh-pill" data-en="Live Dashboard" data-es="Dashboard en Vivo">Live Dashboard</div>
+    <h2><span data-en="Your brand." data-es="Tu marca.">Your brand.</span> <span class="accent-text" data-en="Our obsession." data-es="Nuestra obsesión.">Our obsession.</span></h2>
+    <p data-en="Every campaign tracked in real time. Every metric optimized. Every result delivered." data-es="Cada campaña rastreada. Cada métrica optimizada.">Every campaign tracked in real time. Every metric optimized. Every result delivered.</p>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;position:relative;min-height:520px" id="metrics-scene">
+
+    <!-- CENTER: Main dashboard card -->
+    <div id="main-dash" style="background:linear-gradient(160deg,#1a1a26,#0f0f18);border:1px solid rgba(255,107,26,.3);border-radius:24px;padding:28px;box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 80px rgba(255,107,26,.12);position:relative;overflow:hidden;z-index:5;transition:transform .1s ease">
+      <!-- Top glow -->
+      <div style="position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:400px;height:200px;background:radial-gradient(circle,rgba(255,107,26,.2),transparent 70%);pointer-events:none"></div>
+      <!-- Grid bg -->
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,107,26,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,107,26,.04) 1px,transparent 1px);background-size:32px 32px;pointer-events:none"></div>
+
+      <!-- Header -->
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;position:relative;z-index:1">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:10px;height:10px;border-radius:50%;background:#ff6b1a;box-shadow:0 0 12px #ff6b1a;animation:pulse 1.5s infinite"></div>
+          <span style="font-size:12px;font-weight:700;color:#fff" data-en="Verto Live Dashboard" data-es="Dashboard Verto en Vivo">Verto Live Dashboard</span>
+        </div>
+        <div style="display:flex;gap:5px">
+          <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#febc2e"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#28c840"></div>
+        </div>
+      </div>
+
+      <!-- Main stats row -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;position:relative;z-index:1">
+        <div style="background:rgba(255,107,26,.08);border:1px solid rgba(255,107,26,.2);border-radius:14px;padding:16px;text-align:center">
+          <div style="font-size:11px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px" data-en="Traffic Growth" data-es="Crecimiento">Traffic Growth</div>
+          <div style="font-size:32px;font-weight:800;color:#ff6b1a;letter-spacing:-1px;line-height:1" id="m1">+0%</div>
+          <div style="font-size:10px;color:#10b981;margin-top:5px;font-weight:600">↑ 23% this month</div>
+        </div>
+        <div style="background:rgba(74,158,255,.08);border:1px solid rgba(74,158,255,.2);border-radius:14px;padding:16px;text-align:center">
+          <div style="font-size:11px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">ROI</div>
+          <div style="font-size:32px;font-weight:800;color:#4a9eff;letter-spacing:-1px;line-height:1" id="m2">+0%</div>
+          <div style="font-size:10px;color:#10b981;margin-top:5px;font-weight:600">↑ 41% this quarter</div>
+        </div>
+        <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);border-radius:14px;padding:16px;text-align:center">
+          <div style="font-size:11px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px" data-en="Leads" data-es="Leads">Leads</div>
+          <div style="font-size:32px;font-weight:800;color:#10b981;letter-spacing:-1px;line-height:1" id="m3">0+</div>
+          <div style="font-size:10px;color:#10b981;margin-top:5px;font-weight:600">↑ 18% new leads</div>
+        </div>
+      </div>
+
+      <!-- Chart area -->
+      <div style="background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:14px;margin-bottom:14px;position:relative;z-index:1">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <span style="font-size:11px;font-weight:700;color:#fff" data-en="Campaign Performance" data-es="Rendimiento">Campaign Performance</span>
+          <div style="display:flex;gap:10px">
+            <div style="display:flex;align-items:center;gap:4px"><div style="width:6px;height:6px;border-radius:50%;background:#ff6b1a"></div><span style="font-size:9px;color:rgba(255,255,255,.4)">Organic</span></div>
+            <div style="display:flex;align-items:center;gap:4px"><div style="width:6px;height:6px;border-radius:50%;background:#4a9eff"></div><span style="font-size:9px;color:rgba(255,255,255,.4)">Paid</span></div>
+          </div>
+        </div>
+        <!-- Animated bars -->
+        <div style="display:flex;align-items:flex-end;gap:5px;height:60px" id="chart-bars">
+          <div class="dash-bar" style="--bh:45%;--bc:#ff6b1a"></div>
+          <div class="dash-bar" style="--bh:65%;--bc:#ff6b1a"></div>
+          <div class="dash-bar" style="--bh:52%;--bc:#ff6b1a"></div>
+          <div class="dash-bar" style="--bh:78%;--bc:#ff6b1a"></div>
+          <div class="dash-bar" style="--bh:60%;--bc:#ff6b1a"></div>
+          <div class="dash-bar" style="--bh:88%;--bc:#ff6b1a"></div>
+          <div class="dash-bar" style="--bh:72%;--bc:#ff6b1a"></div>
+          <div class="dash-bar" style="--bh:40%;--bc:#4a9eff"></div>
+          <div class="dash-bar" style="--bh:55%;--bc:#4a9eff"></div>
+          <div class="dash-bar" style="--bh:68%;--bc:#4a9eff"></div>
+          <div class="dash-bar" style="--bh:82%;--bc:#4a9eff"></div>
+          <div class="dash-bar" style="--bh:100%;--bc:#4a9eff"></div>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;position:relative;z-index:1">
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px;text-align:center">
+          <div style="font-size:14px;font-weight:800;color:#fff" id="m4">0+</div>
+          <div style="font-size:9px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.5px;margin-top:2px" data-en="Brands" data-es="Marcas">Brands</div>
+        </div>
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px;text-align:center">
+          <div style="font-size:14px;font-weight:800;color:#fff">6</div>
+          <div style="font-size:9px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.5px;margin-top:2px" data-en="Languages" data-es="Idiomas">Languages</div>
+        </div>
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px;text-align:center">
+          <div style="font-size:14px;font-weight:800;color:#fff">32+</div>
+          <div style="font-size:9px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.5px;margin-top:2px" data-en="Countries" data-es="Países">Countries</div>
+        </div>
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px;text-align:center">
+          <div style="font-size:14px;font-weight:800;color:#ff6b1a">24h</div>
+          <div style="font-size:9px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.5px;margin-top:2px" data-en="Response" data-es="Respuesta">Response</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLOATING CARDS -->
+    <div class="flt-card" id="fc1" style="top:-30px;right:-20px;border-color:rgba(255,107,26,.3);animation:float1 4s ease-in-out infinite">
+      <div style="font-size:18px;margin-bottom:4px">🚀</div>
+      <div style="font-size:18px;font-weight:800;color:#ff6b1a;line-height:1">+312%</div>
+      <div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;margin-top:3px" data-en="Traffic UK" data-es="Tráfico UK">Traffic UK</div>
+    </div>
+
+    <div class="flt-card" id="fc2" style="top:80px;left:-30px;border-color:rgba(74,158,255,.3);animation:float2 5s ease-in-out infinite">
+      <div style="font-size:18px;margin-bottom:4px">💰</div>
+      <div style="font-size:18px;font-weight:800;color:#4a9eff;line-height:1">+580%</div>
+      <div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;margin-top:3px">ROI Spain</div>
+    </div>
+
+    <div class="flt-card" id="fc3" style="bottom:80px;right:-25px;border-color:rgba(16,185,129,.3);animation:float3 6s ease-in-out infinite">
+      <div style="font-size:18px;margin-bottom:4px">🎯</div>
+      <div style="font-size:18px;font-weight:800;color:#10b981;line-height:1">350+</div>
+      <div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;margin-top:3px" data-en="Leads/mo" data-es="Leads/mes">Leads/mo</div>
+    </div>
+
+    <div class="flt-card" id="fc4" style="bottom:-20px;left:-15px;border-color:rgba(168,85,247,.3);animation:float1 7s ease-in-out infinite reverse">
+      <div style="font-size:18px;margin-bottom:4px">⭐</div>
+      <div style="font-size:18px;font-weight:800;color:#a855f7;line-height:1">4.9/5</div>
+      <div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;margin-top:3px" data-en="Rating" data-es="Rating">Rating</div>
+    </div>
+
+    <!-- Notification popup -->
+    <div id="dash-notif" style="position:absolute;top:20px;left:50%;transform:translateX(-50%);background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);border-radius:100px;padding:7px 16px;display:flex;align-items:center;gap:8px;white-space:nowrap;z-index:10;opacity:0;transition:.4s cubic-bezier(.34,1.56,.64,1)">
+      <div style="width:6px;height:6px;border-radius:50%;background:#10b981;box-shadow:0 0 8px #10b981"></div>
+      <span id="notif-txt" style="font-size:11px;font-weight:700;color:#fff">New lead from Paris 🇫🇷</span>
+    </div>
+  </div>
+
+  <style>
+  #metrics-scene{padding:40px 60px}
+  .dash-bar{
+    flex:1;border-radius:3px 3px 0 0;
+    background:var(--bc);
+    height:var(--bh);
+    opacity:.7;
+    transition:height .6s cubic-bezier(.34,1.56,.64,1);
+    animation:bar-pulse 3s ease-in-out infinite;
+  }
+  .dash-bar:nth-child(odd){animation-delay:.3s}
+  @keyframes bar-pulse{
+    0%,100%{opacity:.7;filter:brightness(1)}
+    50%{opacity:1;filter:brightness(1.3)}
+  }
+  .flt-card{
+    position:absolute;
+    background:rgba(13,13,20,.95);
+    backdrop-filter:blur(20px);
+    border:1px solid;
+    border-radius:16px;
+    padding:14px 18px;
+    text-align:center;
+    min-width:90px;
+    z-index:10;
+    box-shadow:0 20px 50px rgba(0,0,0,.5);
+  }
+  @keyframes float1{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-16px) rotate(2deg)}}
+  @keyframes float2{0%,100%{transform:translateY(0) rotate(2deg)}50%{transform:translateY(-20px) rotate(-2deg)}}
+  @keyframes float3{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+
+  @media(max-width:768px){
+    #metrics-scene{padding:20px 0}
+    .flt-card{display:none}
+    #main-dash{border-radius:16px;padding:18px}
+  }
+  </style>
+
+  <script>
+  (function(){
+    // 3D parallax
+    var scene=document.getElementById('metrics-scene');
+    var dash=document.getElementById('main-dash');
+    if(scene&&dash&&window.innerWidth>768){
+      scene.addEventListener('mousemove',function(e){
+        var r=scene.getBoundingClientRect();
+        var x=(e.clientX-r.left-r.width/2)/(r.width/2);
+        var y=(e.clientY-r.top-r.height/2)/(r.height/2);
+        dash.style.transform='perspective(1000px) rotateY('+x*6+'deg) rotateX('+(-y*4)+'deg) translateZ(10px)';
+      });
+      scene.addEventListener('mouseleave',function(){
+        dash.style.transform='perspective(1000px) rotateY(0) rotateX(0) translateZ(0)';
+      });
+    }
+
+    // Animated bars
+    var bars=document.querySelectorAll('.dash-bar');
+    var targets=[45,65,52,78,60,88,72,40,55,68,82,100];
+    function animBars(){
+      bars.forEach(function(b,i){
+        var t=targets[i]||50;
+        b.style.height=t+'%';
+      });
+      setInterval(function(){
+        targets.forEach(function(_,i){targets[i]=Math.round(25+Math.random()*75);});
+        targets[11]=100;
+        bars.forEach(function(b,i){b.style.height=(targets[i]||50)+'%';});
+      },2500);
+    }
+    animBars();
+
+    // Counters
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting)return;
+        function ctr(id,t,pre,suf){
+          var el=document.getElementById(id);if(!el)return;
+          var dur=1500,s=performance.now();
+          (function r(n){var p=Math.min((n-s)/dur,1);var v=1-Math.pow(1-p,3);
+          el.textContent=(pre||'')+Math.round(v*t)+(suf||'');
+          if(p<1)requestAnimationFrame(r);})(performance.now());
+        }
+        ctr('m1',125,'+','%');
+        ctr('m2',487,'+','%');
+        ctr('m3',350,'','+');
+        ctr('m4',200,'','+');
+        obs.disconnect();
+      });
+    },{threshold:.3});
+    var el=document.getElementById('main-dash');
+    if(el)obs.observe(el);
+
+    // Floating notifications
+    var notifs=[
+      'New lead from Paris 🇫🇷',
+      'Campaign live · London 🇬🇧',
+      'ROI +487% · Fashion brand 👗',
+      'New lead from Dubai 🇦🇪',
+      '350+ leads this month 🎯',
+      'Campaign live · Madrid 🇪🇸',
+    ];
+    var ni=0;
+    var notif=document.getElementById('dash-notif');
+    var ntxt=document.getElementById('notif-txt');
+    function showNotif(){
+      if(!notif||!ntxt)return;
+      ntxt.textContent=notifs[ni%notifs.length];ni++;
+      notif.style.opacity='1';notif.style.transform='translateX(-50%) translateY(0)';
+      setTimeout(function(){
+        notif.style.opacity='0';notif.style.transform='translateX(-50%) translateY(-8px)';
+      },2800);
+    }
+    setTimeout(showNotif,1000);
+    setInterval(showNotif,3500);
+  })();
+  </script>
+</section>
 <!-- PROCESS -->
 <section class="section" id="process">
   <div class="sh reveal">
