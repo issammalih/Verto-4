@@ -1174,113 +1174,104 @@ footer{background:#050508;border-top:1px solid var(--border);padding:60px 18px 3
   })();
   </script>
 </section>
- 
-      <!-- Wide card -->
-      <div class="proof-card pc-wide reveal r1" style="--pc:#a855f7">
-        <div class="proof-glow"></div>
-        <div style="display:flex;align-items:center;gap:20px;position:relative;z-index:1">
-          <div style="font-size:44px">🌍</div>
-          <div>
-            <div class="proof-num-sm" style="font-size:32px" data-pw-count="32" data-prefix="" data-suffix="+">0+</div>
-            <div class="proof-label-sm" data-en="Countries with active campaigns" data-es="Países con campañas activas">Countries with active campaigns</div>
-          </div>
-          <div style="margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;max-width:200px">
-            <span class="proof-flag">🇬🇧</span><span class="proof-flag">🇫🇷</span><span class="proof-flag">🇪🇸</span>
-            <span class="proof-flag">🇩🇪</span><span class="proof-flag">🇮🇹</span><span class="proof-flag">🇦🇪</span>
-            <span class="proof-flag">🇺🇸</span><span class="proof-flag">🇨🇦</span><span class="proof-flag">🇧🇷</span>
-          </div>
+ <!-- LIVE DASHBOARD -->
+<section class="section" id="metrics">
+  <div class="sh reveal">
+    <div class="sh-pill" data-en="Live Dashboard" data-es="Dashboard en Vivo">Live Dashboard</div>
+    <h2><span data-en="Your brand." data-es="Tu marca.">Your brand.</span> <span class="accent-text" data-en="Our obsession." data-es="Nuestra obsesión.">Our obsession.</span></h2>
+    <p data-en="Every campaign tracked in real time. Every metric optimized. Every result delivered." data-es="Cada campaña rastreada en tiempo real. Cada resultado entregado.">Every campaign tracked in real time. Every metric optimized. Every result delivered.</p>
+  </div>
+
+  <div style="max-width:700px;margin:0 auto;position:relative">
+
+    <!-- Notification -->
+    <div id="dash-notif" style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);border-radius:100px;padding:6px 16px;display:flex;align-items:center;gap:8px;white-space:nowrap;z-index:10;opacity:0;transition:.5s cubic-bezier(.34,1.56,.64,1)">
+      <div style="width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 8px #10b981;animation:pulse 1.5s infinite"></div>
+      <span id="notif-txt" style="font-size:11px;font-weight:700;color:#fff">New lead from Paris 🇫🇷</span>
+    </div>
+
+    <!-- Main dashboard card -->
+    <div style="background:linear-gradient(160deg,#1a1a26,#0f0f18);border:1px solid rgba(255,107,26,.25);border-radius:20px;padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 60px rgba(255,107,26,.08);position:relative;overflow:hidden">
+
+      <!-- Grid bg -->
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,107,26,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,107,26,.03) 1px,transparent 1px);background-size:28px 28px;pointer-events:none"></div>
+      <!-- Top glow -->
+      <div style="position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:300px;height:200px;background:radial-gradient(circle,rgba(255,107,26,.12),transparent 70%);pointer-events:none"></div>
+
+      <!-- Topbar -->
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;position:relative;z-index:1">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="width:9px;height:9px;border-radius:50%;background:#ff6b1a;box-shadow:0 0 10px #ff6b1a;animation:pulse 1.5s infinite"></div>
+          <span style="font-size:12px;font-weight:700;color:#fff" data-en="Verto Live Dashboard" data-es="Dashboard Verto en Vivo">Verto Live Dashboard</span>
+        </div>
+        <div style="display:flex;gap:5px">
+          <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#febc2e"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#28c840"></div>
         </div>
       </div>
 
-      <!-- Medium card -->
-      <div class="proof-card pc-med reveal r2" style="--pc:#f59e0b">
-        <div class="proof-glow"></div>
-        <div class="proof-tag" data-en="Case Study" data-es="Caso de Estudio">Case Study</div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;position:relative;z-index:1">
-          <div style="font-size:28px">🏨</div>
-          <div>
-            <div style="font-size:13px;font-weight:800;color:#fff" data-en="Luxury Hotel" data-es="Hotel de Lujo">Luxury Hotel</div>
-            <div style="font-size:11px;color:var(--text-3)">🇪🇸 Spain · SEO + Content</div>
-          </div>
+      <!-- 3 main stats -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;position:relative;z-index:1">
+        <div style="background:rgba(255,107,26,.1);border:1px solid rgba(255,107,26,.2);border-radius:12px;padding:14px 10px;text-align:center">
+          <div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-weight:700" data-en="Traffic Growth" data-es="Tráfico">Traffic Growth</div>
+          <div style="font-size:clamp(22px,5vw,32px);font-weight:800;color:#ff6b1a;letter-spacing:-1px;line-height:1" id="d-m1">+0%</div>
+          <div style="font-size:9px;color:#10b981;margin-top:5px;font-weight:600">↑ 23% this month</div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;position:relative;z-index:1">
-          <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:9px;text-align:center">
-            <div style="font-size:18px;font-weight:800;color:#f59e0b" data-pw-count="240" data-prefix="+" data-suffix="%">+0%</div>
-            <div style="font-size:9px;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px" data-en="Bookings" data-es="Reservas">Bookings</div>
-          </div>
-          <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:9px;text-align:center">
-            <div style="font-size:18px;font-weight:800;color:#4a9eff">#1</div>
-            <div style="font-size:9px;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px">Google</div>
-          </div>
+        <div style="background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.2);border-radius:12px;padding:14px 10px;text-align:center">
+          <div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-weight:700">ROI</div>
+          <div style="font-size:clamp(22px,5vw,32px);font-weight:800;color:#4a9eff;letter-spacing:-1px;line-height:1" id="d-m2">+0%</div>
+          <div style="font-size:9px;color:#10b981;margin-top:5px;font-weight:600">↑ 41% this quarter</div>
+        </div>
+        <div style="background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:14px 10px;text-align:center">
+          <div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-weight:700" data-en="Leads" data-es="Leads">Leads</div>
+          <div style="font-size:clamp(22px,5vw,32px);font-weight:800;color:#10b981;letter-spacing:-1px;line-height:1" id="d-m3">0+</div>
+          <div style="font-size:9px;color:#10b981;margin-top:5px;font-weight:600">↑ 18% new leads</div>
         </div>
       </div>
 
-      <!-- Rating card -->
-      <div class="proof-card pc-sm reveal r3" style="--pc:#ec4899">
-        <div class="proof-glow"></div>
-        <div style="position:relative;z-index:1;text-align:center">
-          <div style="font-size:32px;margin-bottom:6px">⭐</div>
-          <div style="font-size:36px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1">4.9</div>
-          <div style="font-size:11px;color:var(--text-3);margin-top:4px" data-en="Client Rating" data-es="Calificación">Client Rating</div>
-          <div style="display:flex;justify-content:center;gap:3px;margin-top:8px">
-            <span style="color:#f59e0b;font-size:14px">★★★★★</span>
-          </div>
-          <div style="font-size:10px;color:var(--text-3);margin-top:6px" data-en="200+ reviews" data-es="200+ reseñas">200+ reviews</div>
-        </div>
-      </div>
-
-      <!-- Languages card -->
-      <div class="proof-card pc-med reveal r1" style="--pc:#06b6d4">
-        <div class="proof-glow"></div>
-        <div class="proof-tag" data-en="Multilingual" data-es="Multilingüe">Multilingual</div>
-        <div style="font-size:28px;font-weight:800;color:#06b6d4;letter-spacing:-1px;margin-bottom:8px;position:relative;z-index:1" data-pw-count="6" data-prefix="" data-suffix=" Languages">0 Languages</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;position:relative;z-index:1">
-          <span class="lang-chip">🇬🇧 EN</span>
-          <span class="lang-chip">🇪🇸 ES</span>
-          <span class="lang-chip">🇫🇷 FR</span>
-          <span class="lang-chip">🇩🇪 DE</span>
-          <span class="lang-chip">🇮🇹 IT</span>
-          <span class="lang-chip">🇸🇦 AR</span>
-        </div>
-      </div>
-
-      <!-- Response card -->
-      <div class="proof-card pc-sm reveal r2" style="--pc:#10b981">
-        <div class="proof-glow"></div>
-        <div style="position:relative;z-index:1;text-align:center">
-          <div style="font-size:28px;margin-bottom:6px">⚡</div>
-          <div style="font-size:40px;font-weight:800;color:#10b981;letter-spacing:-2px;line-height:1">24h</div>
-          <div style="font-size:11px;color:var(--text-3);margin-top:6px" data-en="Max Response Time" data-es="Respuesta Máxima">Max Response Time</div>
-          <div style="display:flex;align-items:center;justify-content:center;gap:5px;margin-top:10px">
-            <div style="width:6px;height:6px;border-radius:50%;background:#10b981;animation:pulse 1.5s infinite"></div>
-            <span style="font-size:10px;color:#10b981;font-weight:700" data-en="Always available" data-es="Siempre disponible">Always available</span>
+      <!-- Chart -->
+      <div style="background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:12px;margin-bottom:12px;position:relative;z-index:1">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <span style="font-size:11px;font-weight:700;color:#fff" data-en="Campaign Performance" data-es="Rendimiento">Campaign Performance</span>
+          <div style="display:flex;gap:10px">
+            <div style="display:flex;align-items:center;gap:4px"><div style="width:6px;height:6px;border-radius:50%;background:#ff6b1a"></div><span style="font-size:9px;color:rgba(255,255,255,.35)" data-en="Organic" data-es="Orgánico">Organic</span></div>
+            <div style="display:flex;align-items:center;gap:4px"><div style="width:6px;height:6px;border-radius:50%;background:#4a9eff"></div><span style="font-size:9px;color:rgba(255,255,255,.35)" data-en="Paid" data-es="Pagado">Paid</span></div>
           </div>
         </div>
-      </div>
-
-      <!-- Big quote card -->
-      <div class="proof-card pc-quote reveal r3" style="--pc:#ff6b1a">
-        <div class="proof-glow"></div>
-        <div style="font-size:40px;color:rgba(255,107,26,.3);line-height:1;margin-bottom:8px;position:relative;z-index:1">"</div>
-        <div style="font-size:14px;color:rgba(255,255,255,.8);line-height:1.6;margin-bottom:16px;font-style:italic;position:relative;z-index:1" data-en="Verto transformed our brand from local to international in 6 months. The ROI speaks for itself." data-es="Verto transformó nuestra marca de local a internacional en 6 meses. El ROI habla por sí solo.">Verto transformed our brand from local to international in 6 months. The ROI speaks for itself.</div>
-        <div style="display:flex;align-items:center;gap:10px;position:relative;z-index:1">
-          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#ff6b1a,#ff8c42);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff">S</div>
-          <div>
-            <div style="font-size:12px;font-weight:700;color:#fff">Sarah M.</div>
-            <div style="font-size:10px;color:var(--text-3)" data-en="Fashion Brand · Paris 🇫🇷" data-es="Marca Moda · París 🇫🇷">Fashion Brand · Paris 🇫🇷</div>
-          </div>
-          <div style="margin-left:auto;color:#f59e0b;font-size:12px">★★★★★</div>
+        <div style="display:flex;align-items:flex-end;gap:4px;height:65px" id="d-bars">
+          <div class="db" style="--dbc:#ff6b1a;--dbh:42%"></div>
+          <div class="db" style="--dbc:#ff6b1a;--dbh:60%"></div>
+          <div class="db" style="--dbc:#ff6b1a;--dbh:48%"></div>
+          <div class="db" style="--dbc:#ff6b1a;--dbh:75%"></div>
+          <div class="db" style="--dbc:#ff6b1a;--dbh:55%"></div>
+          <div class="db" style="--dbc:#ff6b1a;--dbh:85%"></div>
+          <div class="db" style="--dbc:#ff6b1a;--dbh:68%"></div>
+          <div class="db" style="--dbc:#4a9eff;--dbh:38%"></div>
+          <div class="db" style="--dbc:#4a9eff;--dbh:52%"></div>
+          <div class="db" style="--dbc:#4a9eff;--dbh:65%"></div>
+          <div class="db" style="--dbc:#4a9eff;--dbh:78%"></div>
+          <div class="db" style="--dbc:#4a9eff;--dbh:100%"></div>
         </div>
       </div>
 
-      <!-- Brands served -->
-      <div class="proof-card pc-sm reveal r1" style="--pc:#a855f7">
-        <div class="proof-glow"></div>
-        <div style="position:relative;z-index:1;text-align:center">
-          <div style="font-size:28px;margin-bottom:6px">🏢</div>
-          <div style="font-size:40px;font-weight:800;color:#a855f7;letter-spacing:-2px;line-height:1" data-pw-count="200" data-prefix="" data-suffix="+">0+</div>
-          <div style="font-size:11px;color:var(--text-3);margin-top:6px" data-en="Brands Served" data-es="Marcas Servidas">Brands Served</div>
-          <div style="font-size:10px;color:var(--text-3);margin-top:4px" data-en="Globally" data-es="Globalmente">Globally</div>
+      <!-- Bottom 4 stats -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;position:relative;z-index:1">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px 6px;text-align:center">
+          <div style="font-size:clamp(14px,3.5vw,18px);font-weight:800;color:#fff" id="d-m4">0+</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.5px;margin-top:3px" data-en="Brands" data-es="Marcas">Brands</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px 6px;text-align:center">
+          <div style="font-size:clamp(14px,3.5vw,18px);font-weight:800;color:#fff" id="d-m5">0</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.5px;margin-top:3px" data-en="Languages" data-es="Idiomas">Languages</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px 6px;text-align:center">
+          <div style="font-size:clamp(14px,3.5vw,18px);font-weight:800;color:#fff" id="d-m6">0+</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.5px;margin-top:3px" data-en="Countries" data-es="Países">Countries</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px 6px;text-align:center">
+          <div style="font-size:clamp(14px,3.5vw,18px);font-weight:800;color:#ff6b1a">24h</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.5px;margin-top:3px" data-en="Response" data-es="Respuesta">Response</div>
         </div>
       </div>
 
@@ -1288,111 +1279,76 @@ footer{background:#050508;border-top:1px solid var(--border);padding:60px 18px 3
   </div>
 
   <style>
-  .proof-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-template-rows:auto;
-    gap:12px;
+  .db{
+    flex:1;border-radius:3px 3px 0 0;
+    background:var(--dbc);
+    height:var(--dbh);
+    opacity:.75;
+    transition:height .7s cubic-bezier(.34,1.56,.64,1),opacity .3s;
+    min-width:0;
   }
-  .proof-card{
-    background:linear-gradient(160deg,var(--card),var(--bg-2));
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:22px;
-    position:relative;
-    overflow:hidden;
-    transition:all .4s cubic-bezier(.34,1.56,.64,1);
-    cursor:default;
-  }
-  .proof-card::before{
-    content:'';position:absolute;top:0;left:0;right:0;height:2px;
-    background:linear-gradient(90deg,var(--pc),transparent);
-  }
-  .proof-card:hover{
-    transform:translateY(-6px) scale(1.02);
-    border-color:var(--pc);
-    box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 30px color-mix(in srgb,var(--pc) 20%,transparent);
-  }
-  .proof-glow{
-    position:absolute;top:-30px;right:-30px;
-    width:120px;height:120px;border-radius:50%;
-    background:radial-gradient(circle,color-mix(in srgb,var(--pc) 20%,transparent),transparent 70%);
-    pointer-events:none;transition:.3s;
-  }
-  .proof-card:hover .proof-glow{transform:scale(1.5);opacity:.8}
-
-  /* Card sizes */
-  .pc-big{grid-column:span 2;grid-row:span 2;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px}
-  .pc-wide{grid-column:span 2}
-  .pc-med{grid-column:span 2}
-  .pc-quote{grid-column:span 2}
-  .pc-sm{grid-column:span 1}
-
-  .proof-tag{
-    display:inline-block;padding:3px 10px;
-    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
-    border-radius:100px;font-size:9px;font-weight:800;
-    color:var(--pc);letter-spacing:1.5px;text-transform:uppercase;
-    margin-bottom:14px;
-  }
-  .proof-ico{font-size:40px;margin-bottom:12px;filter:drop-shadow(0 4px 12px var(--pc))}
-  .proof-num{font-size:56px;font-weight:800;color:var(--pc);letter-spacing:-2px;line-height:1;margin-bottom:10px}
-  .proof-label{font-size:14px;font-weight:700;color:#fff;margin-bottom:6px}
-  .proof-sub{font-size:11px;color:var(--text-3)}
-  .proof-ico-sm{font-size:26px;margin-bottom:8px;position:relative;z-index:1}
-  .proof-num-sm{font-size:30px;font-weight:800;color:var(--pc);letter-spacing:-1px;line-height:1;margin-bottom:4px;position:relative;z-index:1}
-  .proof-label-sm{font-size:11px;color:var(--text-2);margin-bottom:8px;position:relative;z-index:1}
-  .proof-pill{display:inline-block;padding:3px 10px;background:rgba(255,255,255,.06);border-radius:100px;font-size:10px;color:var(--text-3);position:relative;z-index:1}
-  .proof-flag{font-size:18px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.3))}
-  .lang-chip{padding:4px 10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:100px;font-size:10px;font-weight:700;color:#fff}
-
-  @media(max-width:768px){
-    .proof-grid{grid-template-columns:repeat(2,1fr)}
-    .pc-big{grid-column:span 2;padding:24px}
-    .pc-big .proof-num{font-size:40px}
-    .pc-wide,.pc-med,.pc-quote{grid-column:span 2}
-    .pc-sm{grid-column:span 1}
-  }
-  @media(max-width:400px){
-    .proof-grid{grid-template-columns:1fr}
-    .pc-big,.pc-wide,.pc-med,.pc-quote,.pc-sm{grid-column:span 1}
-  }
+  .db:hover{opacity:1;filter:brightness(1.3)}
   </style>
 
   <script>
   (function(){
-    var obs=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
+    // Counters on scroll
+    var obs=new IntersectionObserver(function(en){
+      en.forEach(function(e){
         if(!e.isIntersecting)return;
-        e.target.querySelectorAll('[data-pw-count]').forEach(function(el){
-          var t=+el.getAttribute('data-pw-count');
-          var pre=el.getAttribute('data-prefix')||'';
-          var suf=el.getAttribute('data-suffix')||'';
+        function ct(id,t,pre,suf){
+          var el=document.getElementById(id);if(!el)return;
           var dur=1600,s=performance.now();
-          (function r(n){
-            var p=Math.min((n-s)/dur,1);
-            var v=1-Math.pow(1-p,3);
-            el.textContent=pre+Math.round(v*t)+suf;
-            if(p<1)requestAnimationFrame(r);
-          })(performance.now());
-        });
-        obs.unobserve(e.target);
+          (function r(n){var p=Math.min((n-s)/dur,1);var v=1-Math.pow(1-p,3);
+          el.textContent=(pre||'')+Math.round(v*t)+(suf||'');
+          if(p<1)requestAnimationFrame(r);})(performance.now());
+        }
+        ct('d-m1',125,'+','%');
+        ct('d-m2',487,'+','%');
+        ct('d-m3',350,'','+');
+        ct('d-m4',200,'','+');
+        ct('d-m5',6,'','');
+        ct('d-m6',32,'','+');
+        obs.disconnect();
       });
-    },{threshold:.2});
-    document.querySelectorAll('#proof .proof-card').forEach(function(el){obs.observe(el)});
+    },{threshold:.3});
+    var sec=document.getElementById('metrics');
+    if(sec)obs.observe(sec);
 
-    // 3D tilt on hover
-    document.querySelectorAll('.proof-card').forEach(function(card){
-      card.addEventListener('mousemove',function(e){
-        var r=card.getBoundingClientRect();
-        var x=(e.clientX-r.left)/r.width-.5;
-        var y=(e.clientY-r.top)/r.height-.5;
-        card.style.transform='translateY(-6px) scale(1.02) perspective(600px) rotateY('+(x*10)+'deg) rotateX('+(-y*8)+'deg)';
-      });
-      card.addEventListener('mouseleave',function(){
-        card.style.transform='';
-      });
-    });
+    // Live bars animation
+    var bars=document.querySelectorAll('#d-bars .db');
+    var tgts=[42,60,48,75,55,85,68,38,52,65,78,100];
+    function animBars(){
+      tgts.forEach(function(_,i){tgts[i]=Math.round(20+Math.random()*80);});
+      tgts[11]=100;
+      bars.forEach(function(b,i){b.style.height=(tgts[i]||50)+'%';});
+    }
+    setInterval(animBars,2200);
+
+    // Live notifications
+    var notifs=[
+      'New lead from Paris 🇫🇷',
+      'Campaign live · London 🇬🇧',
+      'ROI +487% · Fashion 👗',
+      'New lead from Dubai 🇦🇪',
+      'Campaign live · Madrid 🇪🇸',
+      '+312% Traffic · Beauty UK 💄',
+    ];
+    var ni=0;
+    var notif=document.getElementById('dash-notif');
+    var ntxt=document.getElementById('notif-txt');
+    function showN(){
+      if(!notif||!ntxt)return;
+      ntxt.textContent=notifs[ni%notifs.length];ni++;
+      notif.style.opacity='1';
+      notif.style.transform='translateX(-50%) translateY(0)';
+      setTimeout(function(){
+        notif.style.opacity='0';
+        notif.style.transform='translateX(-50%) translateY(-6px)';
+      },2800);
+    }
+    setTimeout(showN,800);
+    setInterval(showN,3500);
   })();
   </script>
 </section>
