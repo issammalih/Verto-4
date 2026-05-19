@@ -743,6 +743,15 @@ footer{background:#050508;border-top:1px solid var(--border);padding:60px 18px 3
     .feed-grid{grid-template-columns:1fr !important}
     .feed-stats-grid{grid-template-columns:repeat(2,1fr) !important}
   }
+    @media(max-width:768px){
+  #metrics .mock-stats,
+  #metrics [style*="repeat(3"]{
+    grid-template-columns:repeat(2,1fr) !important;
+  }
+  #metrics [id="d-m3"]{
+    display:none !important;
+  }
+}
   </style>
 
   <script>
